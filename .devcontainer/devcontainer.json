@@ -1,0 +1,20 @@
+{
+  "name": "DDWU BI 2026",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "hostRequirements": { "cpus": 2 },
+  "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y sqlite3 && pip install --user pandas openpyxl matplotlib",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "alexcvzz.vscode-sqlite",
+        "qwtel.sqlite-viewer",
+        "GitHub.copilot-chat"
+      ],
+      "settings": {
+        "sqlite.sqlite3": "/usr/bin/sqlite3",
+        "files.autoSave": "afterDelay"
+      }
+    }
+  }
+}
