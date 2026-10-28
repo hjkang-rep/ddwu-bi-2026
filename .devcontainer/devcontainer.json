@@ -1,22 +1,40 @@
 {
   "name": "DDWU BI 2026",
   "image": "mcr.microsoft.com/devcontainers/python:3.13",
-  "hostRequirements": {
-    "cpus": 2
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
   },
-  "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y sqlite3 && pip install --user pandas openpyxl matplotlib",
+  "hostRequirements": { "cpus": 2 },
+  "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y sqlite3 && pip install --user pandas openpyxl matplotlib ipykernel",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-sqlite",
         "alexcvzz.vscode-sqlite",
         "qwtel.sqlite-viewer",
+        "mechatroner.rainbow-csv",
+        "ms-toolsai.datawrangler",
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "usernamehw.errorlens",
         "GitHub.copilot-chat",
         "openai.chatgpt"
       ],
       "settings": {
+        "files.autoSave": "afterDelay",
+        "python.terminal.executeInFileDir": true,
         "sqlite.sqlite3": "/usr/bin/sqlite3",
-        "files.autoSave": "afterDelay"
+        "sqltools.useNodeRuntime": true,
+        "sqltools.connections": [
+          {
+            "name": "seoul_sales",
+            "driver": "SQLite",
+            "database": "/workspaces/ddwu-bi-2026/data/seoul_sales.db",
+            "previewLimit": 50
+          }
+        ]
       }
     }
   }
