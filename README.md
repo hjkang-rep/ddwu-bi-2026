@@ -17,6 +17,7 @@
 | `data/seoul_sales_2024_2026.csv` | 같은 자료의 CSV (AI 도구에 올릴 때) |
 | `data/seoul_sales_2025.csv` | 2025년만 (파일 크기 한도가 작은 AI 도구용) |
 | `week09/` | 9주차 실습 파일 |
+| `week10/` | 10주차 실습 파일 (`first.sql`, `eda.sql`) |
 | `내작업/` | 여러분이 만든 파일을 두는 곳 |
 
 ## 설치된 도구 (codespace를 만들 때 자동 설치)
