@@ -18,6 +18,7 @@
 | `data/seoul_sales_2025.csv` | 2025년만 (파일 크기 한도가 작은 AI 도구용) |
 | `week09/` | 9주차 실습 파일 |
 | `week10/` | 10주차 실습 파일 (`first.sql`, `eda.sql`) |
+| `week11/` | 11주차 실습 파일 (`customer.sql`, `pitfalls.sql`) |
 | `내작업/` | 여러분이 만든 파일을 두는 곳 |
 
 ## 설치된 도구 (codespace를 만들 때 자동 설치)
@@ -44,6 +45,8 @@
 
 왼쪽의 **소스 제어** 아이콘 → **동기화**를 누르거나, 터미널에서 `git pull`을 실행합니다.
 여러분의 파일은 `내작업/` 폴더에 두면 새 파일을 받을 때 섞이지 않습니다.
+
+수업 파일을 고친 적이 있으면 `git pull`이 `Your local changes to the following files would be overwritten by merge` 메시지와 함께 멈출 수 있습니다. 이때는 터미널에서 `git stash`를 실행해 고친 내용을 치운 뒤 `git pull`을 다시 실행합니다(치운 내용을 되돌리려면 `git stash pop`).
 
 ## 데이터 출처
 
