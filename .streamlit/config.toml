@@ -1,0 +1,7 @@
+# Streamlit 설정 (저장소 맨 위 폴더에서 실행할 때 적용됨)
+[server]
+headless = true        # 처음 실행할 때 이메일을 묻지 않음, 브라우저를 스스로 열지 않음
+runOnSave = true       # 파일을 저장하면 화면을 다시 그림
+
+[browser]
+gatherUsageStats = false

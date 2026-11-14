@@ -5,7 +5,11 @@
     "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
   },
   "hostRequirements": { "cpus": 2 },
-  "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y sqlite3 && pip install --user pandas openpyxl matplotlib ipykernel",
+  "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y sqlite3 && pip install --user -r requirements.txt",
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": { "label": "대시보드 (Streamlit)", "onAutoForward": "notify" }
+  },
   "customizations": {
     "vscode": {
       "extensions": [

@@ -19,6 +19,7 @@
 | `week09/` | 9주차 실습 파일 |
 | `week10/` | 10주차 실습 파일 (`first.sql`, `eda.sql`) |
 | `week11/` | 11주차 실습 파일 (`customer.sql`, `pitfalls.sql`) |
+| `week12/` | 12주차 실습 파일 (`dashboard.sql`, `app_base.py`) |
 | `내작업/` | 여러분이 만든 파일을 두는 곳 |
 
 ## 설치된 도구 (codespace를 만들 때 자동 설치)
@@ -47,6 +48,29 @@
 여러분의 파일은 `내작업/` 폴더에 두면 새 파일을 받을 때 섞이지 않습니다.
 
 수업 파일을 고친 적이 있으면 `git pull`이 `Your local changes to the following files would be overwritten by merge` 메시지와 함께 멈출 수 있습니다. 이때는 터미널에서 `git stash`를 실행해 고친 내용을 치운 뒤 `git pull`을 다시 실행합니다(치운 내용을 되돌리려면 `git stash pop`).
+
+## 대시보드 실행 (Streamlit)
+
+12주차부터 파이썬 패키지 Streamlit으로 대시보드를 만듭니다.
+
+1. **이미 만든 codespace**에는 Streamlit이 없습니다. 터미널에서 한 번만 실행합니다(1분쯤 걸림).
+
+   ```
+   pip install --user streamlit==1.67.0
+   ```
+
+   이 저장소로 새로 만드는 codespace에는 자동으로 설치됩니다(`requirements.txt`).
+2. 저장소 맨 위 폴더(`/workspaces/ddwu-bi-2026`)의 터미널에서 실행합니다.
+
+   ```
+   python -m streamlit run week12/app_base.py
+   ```
+
+3. 오른쪽 아래에 **Open in Browser** 단추가 뜨면 누릅니다. 놓쳤으면 아래 패널의 **PORTS** 탭에서 8501 줄의 지구본 아이콘(Open in Browser)을 누릅니다.
+4. 끝낼 때는 터미널에서 `Ctrl+C`를 누릅니다.
+
+고쳐 쓰려면 먼저 `cp week12/app_base.py 내작업/w12_app.py`로 복사한 뒤 `python -m streamlit run 내작업/w12_app.py`로 실행합니다.
+설정 파일 `.streamlit/config.toml`은 저장소 맨 위 폴더에서 실행할 때 적용됩니다(파일을 저장하면 화면을 다시 그림).
 
 ## 데이터 출처
 
